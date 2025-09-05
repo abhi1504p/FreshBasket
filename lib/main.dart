@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:freshbasket/screen/auth/mobile_screen/mobile_login_controller.dart';
+import 'package:freshbasket/screen/auth/mobile_screen/otp/otp_controller.dart';
 import 'package:freshbasket/screen/auth/onboarding/onboarding_controller.dart';
 import 'package:freshbasket/screen/splash/splash_screen.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import 'common/color_extension.dart';
 import 'common/globs.dart';
+import 'screen/tabview/main_tab_view_controller.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,9 +19,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    Get.put(Globs());
-    Get.put(TColor());
     Get.put(OnboardingController());
+    Get.put(MobileLoginController());
+    Get.put(OtpController());
+    Get.put(MainTabViewController());
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: Globs.appName,

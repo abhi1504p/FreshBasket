@@ -53,7 +53,8 @@ dependencies:
   path_provider: ^2.1.5
   maps_toolkit: ^3.1.0
   fl_chart: ^1.1.0
-  get: 
+  get:
+  persistent_bottom_nav_bar_v2: ^6.1.0
 
 dev_dependencies:
   flutter_test:
@@ -81,6 +82,7 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/img/
+    - lib/screen/tabview/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

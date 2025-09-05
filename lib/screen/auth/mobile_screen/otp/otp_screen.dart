@@ -1,22 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:freshbasket/common/common_extenstion.dart';
+import 'package:freshbasket/screen/auth/mobile_screen/otp/otp_controller.dart';
+import 'package:get/get.dart';
 
 import '../../../../common/color_extension.dart';
-import '../../../../common/globs.dart';
 import '../../../../common_widgets/round_button.dart';
+import '../../name_address/name_address_screen.dart';
 
-class OtpScreen extends StatefulWidget {
+class OtpScreen extends StatelessWidget {
   final Map<String, dynamic> passValue;
 
-  const OtpScreen({super.key, required this.passValue});
+  OtpScreen({super.key, required this.passValue});
 
-  @override
-  State<OtpScreen> createState() => _OtpScreenState();
-}
-
-class _OtpScreenState extends State<OtpScreen> {
-  String otpCode = "";
+  final controller = Get.find<OtpController>();
 
   @override
   Widget build(BuildContext context) {
@@ -58,33 +55,32 @@ class _OtpScreenState extends State<OtpScreen> {
                   focusedBorderColor: TColor.primary,
                   enabledBorderColor: Color(0xffF0F0F0),
                   //set to true to show as box or false to show as dash
-                  showFieldAsBox: true,
-                  borderRadius: BorderRadius.circular(25),
+                  showFieldAsBox: false,
+
                   fillColor: Color(0xffF0F0F0),
                   //runs when a code is typed in
                   onCodeChanged: (String code) {
-                    otpCode = code;
+                    controller.otpCode.value = code;
                     //handle validation or checks here
                   },
                   //runs when every textfield is filled
                   onSubmit: (String verificationCode) {
-                    otpCode = verificationCode;
-                    clkVerify();
+                    controller.otpCode.value = verificationCode;
+                    controller.clkVerify();
                   }, // end onSubmit
                 ),
               ),
               RoundButton(
                   title: "VERIFY",
                   onPressed: () {
-                    clkVerify();
+                    controller.clkVerify();
+
                   }),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   TextButton(
-                    onPressed: () {
-                      apiCallingLogin(widget.passValue);
-                    },
+                    onPressed: () {},
                     child: Text(
                       "Resend Again?",
                       style: TextStyle(color: Colors.blue, fontSize: 10),
@@ -97,26 +93,5 @@ class _OtpScreenState extends State<OtpScreen> {
         ),
       )),
     );
-  }
-
-  //TODO: Action
-  void clkVerify() {
-    if (otpCode.length != 6) {
-      mdShowAlert(Globs.appName, "Please enter valid otp", () {});
-      return;
-    }
-    endEditing();
-    widget.passValue["otp_code"] = otpCode;
-    apiCallingVerifyLogin(widget.passValue);
-  }
-
-  //TODO: Api Calling
-
-  void apiCallingVerifyLogin(Map<String, dynamic> parameter) {
-    Globs.showHUD();
-  }
-
-  void apiCallingLogin(Map<String, dynamic> parameter) {
-    Globs.showHUD();
   }
 }
