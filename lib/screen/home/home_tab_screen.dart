@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:freshbasket/common/common_extenstion.dart';
+import 'package:freshbasket/screen/notfication/notification_screen.dart';
+
 import 'package:get/get.dart';
 
 import '../../common/color_extension.dart';
 import '../../common_widgets/section_title_subtitle.dart';
 import '../../common_widgets/select_button.dart';
+import 'detail_screen/detail_screen.dart';
 import 'fruit_cell.dart';
 import 'home_tab_controller.dart';
 
@@ -12,7 +16,7 @@ class HomeTabScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(HomeController());
+    final controller = Get.find<HomeController>();
 
     return Scaffold(
       appBar: AppBar(
@@ -29,7 +33,9 @@ class HomeTabScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.to(()=>NotificationScreen());
+            },
             icon: const Icon(Icons.notifications, color: Colors.white),
           )
         ],
@@ -115,7 +121,7 @@ class HomeTabScreen extends StatelessWidget {
                       subtitle: obj["subtitle"].toString(),
                     ),
                     SizedBox(
-                      height: context.width * 0.42 + 80,
+                      height: AppContext(context).width * 0.42 + 80,
                       child: ListView.separated(
                         padding: const EdgeInsets.symmetric(
                             horizontal: 20, vertical: 8),
@@ -124,7 +130,9 @@ class HomeTabScreen extends StatelessWidget {
                           var itemObj = itemArr[index];
                           return FruitsCell(
                             obj: itemObj,
-                            onPressed: () {},
+                            onPressed: () {
+                              Get.to(DetailScreen(obj: itemObj));
+                            },
                           );
                         },
                         separatorBuilder: (context, index) =>

@@ -29,7 +29,7 @@ class FruitsCell extends StatelessWidget {
                     imageUrl: obj["image"].toString(),
                     width: context.width * 0.35,
                     height: context.width * 0.42,
-                    fit: BoxFit.cover,
+                    fit: BoxFit.values.first,
                   ),
                 ),
                 Padding(

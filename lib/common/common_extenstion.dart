@@ -1,28 +1,22 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:intl/intl.dart';
 
 extension AppContext on BuildContext {
   Size get size => MediaQuery.sizeOf(this);
+
   double get width => size.width;
+
   double get height => size.height;
 
-  Future push(Widget widget) async {
-    return Get.to(
-      widget
-    );
+  Future<T?> push<T>(Widget widget) async {
+    return Get.to<T>(widget);
   }
-
-
 
   Future pop() async {
     return Get.back();
   }
 }
-
-
 
 extension DateTimeExtension on DateTime {
   String stringFormat({String format = "yyyy-MM-dd HH:mm:ss"}) {
@@ -33,16 +27,14 @@ extension DateTimeExtension on DateTime {
 extension StringExtension on String {
   String displayDate(
       {String displayFormat = "dd MMM, yyyy",
-        String inputFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-        int addMin = 0}) {
+      String inputFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
+      int addMin = 0}) {
     var date = (DateFormat(inputFormat).parseUTC(this));
-    return  DateFormat(displayFormat).format(date.add(Duration(minutes: 1)));
+    return DateFormat(displayFormat).format(date.add(Duration(minutes: 1)));
   }
 
   DateTime date(
-      {
-        String inputFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",
-        int addMin = 0}) {
+      {String inputFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", int addMin = 0}) {
     return (DateFormat(inputFormat).parseUTC(this));
   }
 }

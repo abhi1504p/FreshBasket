@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:persistent_bottom_nav_bar_v2/persistent_bottom_nav_bar_v2.dart';
 
+import '../favorite/favourite_tab_screen.dart';
 import '../home/home_tab_screen.dart';
+import '../profile/my_account_tab/my_account_tab_screen.dart';
 import 'main_tab_view_controller.dart';
 
 class MainTabViewScreen extends StatelessWidget {
@@ -15,7 +17,7 @@ class MainTabViewScreen extends StatelessWidget {
     return PersistentTabView(
       tabs: [
         PersistentTabConfig(
-          screen:HomeTabScreen(),
+          screen: HomeTabScreen(),
           item: ItemConfig(
             icon: Icon(Icons.home),
             title: "Home",
@@ -31,22 +33,16 @@ class MainTabViewScreen extends StatelessWidget {
           ),
         ),
         PersistentTabConfig(
-          screen: Container(
-            color: Colors.green,
-          ),
+          screen:FavoritesTabScreen(),
           item: ItemConfig(
-
             activeForegroundColor: Colors.red,
             icon: Icon(Icons.favorite),
             title: "Favourite",
           ),
         ),
         PersistentTabConfig(
-          screen: Container(
-            color: Colors.green,
-          ),
+          screen: MyAccountTabScreen(),
           item: ItemConfig(
-
             icon: Icon(Icons.person),
             title: "Account",
           ),

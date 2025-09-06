@@ -2,14 +2,24 @@
 class Assets {
   Assets._();
 
+  static const String accountSettingAccountSettingScreen = 'lib/screen/settings/account_setting/account_setting_screen.dart';
+  static const String addressAddAddressAddController = 'lib/screen/settings/address_add/address_add_controller.dart';
+  static const String addressAddAddressAddScreen = 'lib/screen/settings/address_add/address_add_screen.dart';
+  static const String addressListAddressListController = 'lib/screen/settings/address_list/address_list_controller.dart';
+  static const String addressListAddressListScreen = 'lib/screen/settings/address_list/address_list_screen.dart';
   static const String commonColorExtension = 'lib/common/color_extension.dart';
   static const String commonCommonExtenstion = 'lib/common/common_extenstion.dart';
   static const String commonGlobs = 'lib/common/globs.dart';
   static const String commonWidgetsIconRoundedButton = 'lib/common_widgets/icon_rounded_button.dart';
+  static const String commonWidgetsPopLayout = 'lib/common_widgets/pop_layout.dart';
+  static const String commonWidgetsReviewRow = 'lib/common_widgets/review_row.dart';
   static const String commonWidgetsRoundButton = 'lib/common_widgets/round_button.dart';
   static const String commonWidgetsRoundTextfield = 'lib/common_widgets/round_textfield.dart';
   static const String commonWidgetsSectionTitleSubtitle = 'lib/common_widgets/section_title_subtitle.dart';
   static const String commonWidgetsSelectButton = 'lib/common_widgets/select_button.dart';
+  static const String detailScreenDetailController = 'lib/screen/home/detail_screen/detail_controller.dart';
+  static const String detailScreenDetailScreen = 'lib/screen/home/detail_screen/detail_screen.dart';
+  static const String favoriteFavouriteTabScreen = 'lib/screen/favorite/favourite_tab_screen.dart';
   static const String fontsPoppinsBold = 'assets/fonts/Poppins-Bold.ttf';
   static const String fontsPoppinsLight = 'assets/fonts/Poppins-Light.ttf';
   static const String fontsPoppinsMedium = 'assets/fonts/Poppins-Medium.ttf';
@@ -62,18 +72,41 @@ class Assets {
   static const String imgUserPlaceholder = 'assets/img/user_placeholder.png';
   static const String imgUserTab = 'assets/img/user_tab.png';
   static const String imgVisa = 'assets/img/visa.png';
+  static const String languageSettingLanguageSettingController = 'lib/screen/settings/language_setting/language_setting_controller.dart';
+  static const String languageSettingLanguageSettingScreen = 'lib/screen/settings/language_setting/language_setting_screen.dart';
+  static const String languageSettingPickUpController = 'lib/screen/settings/language_setting/pick_up_controller.dart';
+  static const String languageSettingPickUpLangaugeScreen = 'lib/screen/settings/language_setting/pick_up_langauge_screen.dart';
   static const String libMain = 'lib/main.dart';
   static const String loginLoginController = 'lib/screen/auth/login/login_controller.dart';
   static const String loginLoginScreen = 'lib/screen/auth/login/login_screen.dart';
   static const String mobileScreenMobileLoginController = 'lib/screen/auth/mobile_screen/mobile_login_controller.dart';
   static const String mobileScreenMobileScreen = 'lib/screen/auth/mobile_screen/mobile_screen.dart';
+  static const String myAccountTabMyAccountTabController = 'lib/screen/profile/my_account_tab/my_account_tab_controller.dart';
+  static const String myAccountTabMyAccountTabScreen = 'lib/screen/profile/my_account_tab/my_account_tab_screen.dart';
+  static const String myOrderDetailsMyOrderDetails = 'lib/screen/profile/my_order_details/my_order_details.dart';
+  static const String myOrderDetailsMyOrderDetailsController = 'lib/screen/profile/my_order_details/my_order_details_controller.dart';
+  static const String myOrderScreenMyOrderController = 'lib/screen/profile/my_order_screen/my_order_controller.dart';
+  static const String myOrderScreenMyOrderScreen = 'lib/screen/profile/my_order_screen/my_order_screen.dart';
   static const String nameAddressNameAddressScreen = 'lib/screen/auth/name_address/name_address_screen.dart';
+  static const String notficationNotificationRow = 'lib/screen/notfication/notification_row.dart';
+  static const String notficationNotificationScreen = 'lib/screen/notfication/notification_screen.dart';
+  static const String notificationSettingNotifiactionSettingController = 'lib/screen/settings/notification_setting/notifiaction_setting_controller.dart';
+  static const String notificationSettingNotificationSettingScreen = 'lib/screen/settings/notification_setting/notification_setting_screen.dart';
   static const String onboardingOnboardingController = 'lib/screen/auth/onboarding/onboarding_controller.dart';
   static const String onboardingOnboardingScreen = 'lib/screen/auth/onboarding/onboarding_screen.dart';
   static const String otpOtpController = 'lib/screen/auth/mobile_screen/otp/otp_controller.dart';
   static const String otpOtpScreen = 'lib/screen/auth/mobile_screen/otp/otp_screen.dart';
+  static const String ratingPopupRatingPopupController = 'lib/screen/profile/rating_popup/rating_popup_controller.dart';
+  static const String ratingPopupRatingPopupScreen = 'lib/screen/profile/rating_popup/rating_popup_screen.dart';
+  static const String serviceServiceCall = 'lib/service/service_call.dart';
+  static const String settingsSettingController = 'lib/screen/settings/setting_controller.dart';
+  static const String settingsSettingScreen = 'lib/screen/settings/setting_screen.dart';
   static const String splashSplashScreen = 'lib/screen/splash/splash_screen.dart';
   static const String tabviewMainTabViewController = 'lib/screen/tabview/main_tab_view_controller.dart';
   static const String tabviewMainTabViewScreen = 'lib/screen/tabview/main_tab_view_screen.dart';
+  static const String widgetAddressRow = 'lib/screen/settings/address_list/widget/address_row.dart';
+  static const String widgetFavouriteRow = 'lib/screen/favorite/widget/favourite_row.dart';
+  static const String widgetMyOrderRow = 'lib/screen/profile/my_order_screen/widget/my_order_row.dart';
+  static const String widgetSettingRow = 'lib/screen/settings/widget/setting_row.dart';
 
 }

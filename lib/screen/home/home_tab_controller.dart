@@ -20,7 +20,8 @@ class HomeController extends GetxController {
           "unit_name": "kg",
           "rate": "4.5",
           "image":
-          "https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg"
+          "https://upload.wikimedia.org/wikipedia/commons/1/15/Red_Apple.jpg",
+          "description": "Fresh, juicy, and naturally sweet apples rich in fiber and vitamins. Perfect for snacking or adding to salads and desserts."
         },
         {
           "item_name": "Banana",
